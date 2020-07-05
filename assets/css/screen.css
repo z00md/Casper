@@ -31,6 +31,11 @@ production stylesheet in assets/built/screen.css
 /* ---------------------------------------------------------- */
 @import "global.css";
 
+.medium-zoom-overlay,
+.medium-zoom-image {
+  z-index: 100;
+}
+
 body {
     background: #fff;
 }
@@ -787,7 +792,7 @@ The knock-on effect of this is ugly browser-scroll bars at the bottom, so 80px o
     line-height: 1.4em;
     font-weight: 400;
     letter-spacing: 0.2px;
-    text-transform: uppercase;
+    /* text-transform: uppercase; */
 }
 
 .post-card-byline-content span {
@@ -1520,7 +1525,7 @@ Usage (In Ghost editor):
     font-size: 1.2rem;
     line-height: 1.2em;
     letter-spacing: 0.2px;
-    text-transform: uppercase;;
+    /* text-transform: uppercase;; */
 }
 
 .post-full-byline-meta h4 {
