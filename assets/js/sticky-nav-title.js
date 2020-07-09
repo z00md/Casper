@@ -24,6 +24,7 @@
     window.Casper.stickyNavTitle = function stickyNavTitle(options) {
         var nav = document.querySelector(options.navSelector);
         var title = document.querySelector(options.titleSelector);
+        var progressEl = document.querySelector(options.progressSelector);
 
         var lastScrollY = window.scrollY;
         var ticking = false;
@@ -50,6 +51,11 @@
             } else {
                 nav.classList.remove(options.activeClass);
             }
+
+            // Calculate reding progress using window y property
+            var progress = (window.scrollY)/(document.body.clientHeight-window.innerHeight)*100;
+            progressEl.style.width = progress + "%";
+
 
             ticking = false;
         }

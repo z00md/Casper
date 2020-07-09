@@ -30,7 +30,14 @@ production stylesheet in assets/built/screen.css
 /* 1. Global - Set up the things
 /* ---------------------------------------------------------- */
 @import "global.css";
+@import "custom-header.css";
 
+.progress {
+    height: 2px;
+    width: 0;
+    transition: .5s;
+    background: linear-gradient(90deg, rgba(57,144,39,1) 0%, rgba(255,209,40,1) 44%, rgba(215,81,81,1) 100%);
+}
 .medium-zoom-overlay,
 .medium-zoom-image {
   z-index: 100;
@@ -114,6 +121,14 @@ body {
 /* 4. Site Header
 /* ---------------------------------------------------------- */
 
+.custom-header {
+    height: 190px;
+    width: 100%;
+    border: 1px solid red;
+    position: absolute;
+    top: 64px;
+}
+
 .site-header-background {
     position: relative;
     margin-top: 64px;
@@ -159,7 +174,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 6vw 3vw;
+    /* padding: 6vw 3vw; */
     min-height: 200px;
     max-height: 340px;
 }
@@ -199,7 +214,7 @@ body {
 }
 
 .site-home-header .site-header-content {
-    padding: 5vw 3vw 6vw;
+    /* padding: 5vw 3vw 6vw; */
 }
 
 .site-home-header .site-title {
@@ -332,7 +347,7 @@ body {
     overflow-y: hidden;
     -webkit-overflow-scrolling: touch;
     margin-right: 10px;
-    padding: 10px 0 80px;
+    padding: 10px 0 80px 5vw;
     font-weight: 500;
     letter-spacing: 0.2px;
     text-transform: uppercase;
