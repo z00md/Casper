@@ -31,6 +31,23 @@ production stylesheet in assets/built/screen.css
 /* ---------------------------------------------------------- */
 @import "global.css";
 @import "custom-header.css";
+@import "dark-mode.css";
+
+.theme-toggle {
+    opacity: .7;
+    position: fixed;
+    background: black;
+    right: 10px;
+    top: 10px;
+    z-index: 10000;
+    /* box-shadow: 0 0 18px 4px #9b9b9b; */
+    border-radius: 24px;
+    width: 32px;
+}
+
+.theme-toggle:hover {
+    opacity: 1;
+}
 
 .progress {
     height: 2px;
@@ -2887,7 +2904,7 @@ Usage (In Ghost editor):
 
 /* 12. Dark Mode
 /* ---------------------------------------------------------- */
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
     body {
         color: rgba(255, 255, 255, 0.75);
         background: var(--darkmode);
@@ -3104,4 +3121,4 @@ Usage (In Ghost editor):
     .subscribe-form .success .message-success {
         color: color(var(--green) l(+5%) s(-5%));
     }
-}
+} */
