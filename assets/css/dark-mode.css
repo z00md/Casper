@@ -8,6 +8,10 @@
         opacity: 0.9;
     }
 
+    .tag-cloud-item:hover {
+        background-color: #233f57;
+    }
+
     .site-header-background:before {
         background: rgba(0,0,0,0.6);
     }

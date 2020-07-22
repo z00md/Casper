@@ -1,0 +1,44 @@
+{{!--
+This template is used for the tags page.
+You must first create a page called Tags in the dashboard to enable it.
+This template is inspired from https://github.com/eddiesigner/liebling/blob/master/page-tags.hbs
+The classes and components have been used as per casper theme
+--}}
+
+{{!-- This block loads specific styles for the authors page --}}
+{{#contentFor "styles"}}
+  <link rel="preload" href="{{asset "css/tags.css"}}" as="style" />
+
+  <link rel="stylesheet" type="text/css" href="{{asset "css/tags.css"}}" media="screen" />
+{{/contentFor}}
+
+{{!-- The tag below means: insert everything in this file
+into the {body} of the default.hbs template --}}
+{{!< default}}
+
+{{!-- Special header.hbs partial to generate the <header> tag --}}
+{{#post}}
+  {{> site-header background=feature_image}}
+{{/post}}
+
+
+{{!-- The main content area --}}
+<main id="site-main" class="site-main outer">
+    <div class="inner posts">
+        <div class="tag-cloud">
+          {{!-- Fetch all tags with counts --}}
+          {{#get 'tags' limit='all' include='count.posts'}}
+            {{#foreach tags}}
+              <div class="post-card-byline-content">
+                <span>
+                  <a href="{{url}}">{{name}}</a>
+                </span>
+                <span class="post-card-byline-date">
+                      {{plural count.posts empty=(t "No posts") singular=(t "1 post") plural=(t "% posts")}}
+                </span>
+              </div>
+            {{/foreach}}
+          {{/get}}
+        </div>
+    </div>
+</main>
