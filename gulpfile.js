@@ -76,6 +76,17 @@ function js(done) {
     ], handleError(done));
 }
 
+function customjs(done) {
+    pump([
+        src([
+            // pull in all custom js files
+            'assets/js/game/*/*.js'
+        ], {sourcemaps: false}),
+        dest('assets/built/custom', {sourcemaps: '.'}),
+        livereload()
+    ], handleError(done));
+}
+
 function zipper(done) {
     const filename = require('./package.json').name + '.zip';
 
@@ -92,10 +103,11 @@ function zipper(done) {
 }
 
 const jsWatcher = () => watch('assets/js/**', js);
+const customjsWatcher = () => watch('assets/js/**', customjs);
 const cssWatcher = () => watch('assets/css/**', css);
 const hbsWatcher = () => watch(['*.hbs', 'partials/**/*.hbs'], hbs);
-const watcher = parallel(cssWatcher, hbsWatcher, jsWatcher);
-const build = series(css, js);
+const watcher = parallel(cssWatcher, hbsWatcher, jsWatcher, customjsWatcher);
+const build = series(css, js, customjs);
 
 exports.build = build;
 exports.zip = series(build, zipper);

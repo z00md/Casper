@@ -106,6 +106,78 @@ body {
     text-indent: -9999px;
 }
 
+/* Custom cricket chart */
+.pitch {
+    width: 3vw;
+    height: 12vw;
+    margin-top: 5vw;
+    background-color: antiquewhite;
+    border: 1px solid #b8a46d;
+    background: linear-gradient(180deg, #a1823b, #ffe2b6, #c69a49);
+    border-radius: 8px;
+}
+
+section#score-container {
+    padding: 2vw;
+    font-size: 2.5rem;
+    align-self: center;
+    text-align: center;
+}
+
+.question-wrapper {
+    line-height: 4rem;
+}
+
+.question-subtitle {
+    font-size: 2.8rem;
+    font-weight: bold;
+}
+
+button.start-button {
+    color: black;
+    padding: 4vw;
+    border-radius: 5px;
+    background: linear-gradient(180deg,#6cb269,#6cb269,#4b8548)
+}
+
+ul.results {
+    list-style: none;
+}
+
+.results-text {
+    margin-top: 5vw;
+}
+
+.game-header {
+    text-align: center;
+    padding: 2vw;
+}
+
+@media (min-width: 500px) {
+    #site-main .container {
+        height: 100%;
+        display: flex;
+    }
+    #chart-container {
+        width: 70%;
+    }
+    #score-container {
+        width: 30%;
+    }
+}
+
+@media (max-width: 500px) {
+    #site-main .container {
+        height: 100%;
+        display: block;
+    }
+
+    .theme-toggle {
+        position: fixed;
+        bottom: 10px;
+        top: unset;
+    }
+}
 
 /* 2. Layout - Page building blocks
 /* ---------------------------------------------------------- */

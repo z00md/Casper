@@ -1,0 +1,30 @@
+{{!--
+Author: z00md
+Date: 28 July 2020
+This template is used for custom page. If you would like to render this as a page-template, 
+create a page with the same slug that this template will be using in the routes.yaml
+--}}
+
+{{!-- The tag below means: insert everything in this file
+into the {body} of the default.hbs template --}}
+{{!< default}}
+
+{{!-- Special header.hbs partial to generate the <header> tag --}}
+{{#page}}
+  {{> site-header}}
+{{/page}}
+
+{{!-- The main content area --}}
+<main id="site-main" class="site-main outer">
+        <h2 class="game-header">Do you know all cricket positions?</h2>
+        <div class="container" >
+            <section id="chart-container"></section>
+            <section id="score-container"></section>
+        </div>
+    
+</main>
+
+<script src="https://code.highcharts.com/highcharts.js"></script>
+<script src="../../assets/js/game/cricket/data.js" defer></script>
+<script src="../../assets/js/game/cricket/index.js" defer></script>
+
