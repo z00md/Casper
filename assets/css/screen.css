@@ -74,25 +74,6 @@ production stylesheet in assets/built/screen.css
     background: linear-gradient(90deg, rgba(57,144,39,1) 0%, rgba(255,209,40,1) 44%, rgba(215,81,81,1) 100%);
 }
 
-.tag-cloud {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    padding: 5vw 0;
-}
-
-.tag-cloud-item-link {
-    padding: 5px;
-}
-
-.tag-cloud-item:hover {
-    background-color: #3c82c0;
-}
-
-.tag-cloud .post-card-byline-content {
-    flex: 1 1 10%;
-}
-
 #medium-zoom-container {
     position: fixed;
     top: 64px;

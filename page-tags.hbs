@@ -25,18 +25,12 @@ into the {body} of the default.hbs template --}}
 {{!-- The main content area --}}
 <main id="site-main" class="site-main outer">
     <div class="inner posts">
-        <div class="tag-cloud">
-          {{!-- Fetch all tags with counts --}}
-          {{#get 'tags' limit='all' include='count.posts'}}
+        <div class="post-feed">
+          {{!-- Fetch top 15 tags with counts --}}
+          {{#get 'tags' limit='15' order="count.posts desc" include='count.posts'}}
             {{#foreach tags}}
-              <div class="post-card-byline-content">
-                <span>
-                  <a href="{{url}}">{{name}}</a>
-                </span>
-                <span class="post-card-byline-date">
-                      {{plural count.posts empty=(t "No posts") singular=(t "1 post") plural=(t "% posts")}}
-                </span>
-              </div>
+              {{!-- Use the custom partials/tag-card.hbs with parameters --}}
+              {{> "tag-card" post_count=count.posts title=name}}
             {{/foreach}}
           {{/get}}
         </div>
