@@ -1,4 +1,26 @@
 .dark {
+    .theme-toggle {
+        .st2 {
+            fill: none;
+            stroke: #bbb;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+            stroke-miterlimit: 10;
+        }
+
+        .st3 {
+            fill: none;
+            stroke: #bbb;
+            stroke-linejoin: round;
+            stroke-miterlimit: 10;
+        }
+
+        .beams {
+            visibility: visible;
+        }
+
+    }
+
     body {
         color: rgba(255, 255, 255, 0.75);
         background: var(--darkmode);
@@ -125,6 +147,13 @@
     .post-full-content code {
         color: #fff;
         background: #000;
+    }
+
+    .post-full-content pre code {
+        padding: 0;
+        font-size: inherit;
+        line-height: inherit;
+        background: transparent;
     }
 
     hr {

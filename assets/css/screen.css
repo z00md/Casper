@@ -36,13 +36,31 @@ production stylesheet in assets/built/screen.css
 .theme-toggle {
     opacity: .7;
     position: fixed;
-    background: black;
     right: 10px;
     top: 10px;
     z-index: 10000;
-    /* box-shadow: 0 0 18px 4px #9b9b9b; */
     border-radius: 24px;
-    width: 32px;
+    width: 48px;
+    cursor: pointer;
+
+    .st2 {
+        fill: none;
+        stroke: #aaa;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+     }
+
+     .st3 {
+        fill: none;
+        stroke: #aaa;
+        stroke-linejoin: round;
+        stroke-miterlimit: 10;
+     }
+
+     .beams {
+         visibility: hidden;
+     }
 }
 
 .theme-toggle:hover {
