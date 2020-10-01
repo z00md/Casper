@@ -1,0 +1,17 @@
+{
+    "name":"Cybercafe.dev",
+    "short_name":"Cybercafe",
+    "description":"A blog by z00md",
+    "lang":"en",
+    "start_url":"/",
+    "background_color":"#ffffff",
+    "display":"fullscreen",
+    "theme_color":"#313b3f",
+    "icons":[
+       {
+        "src": "/assets/icons/z00md_logo.png",
+        "type": "image/png",
+        "sizes": "200x200"
+      }
+    ]
+  }

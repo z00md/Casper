@@ -23,6 +23,10 @@ if (currentTheme) {
 }
 
 $(".theme-toggle").on("click", function(evt) {
+  // Add vibration feedback on theme change
+  if (typeof window.navigator.vibrate === "function") {
+    window.navigator.vibrate(50);
+  }
   var attr = evt.currentTarget.getAttribute("data-theme");
   var result;
   if (attr) {

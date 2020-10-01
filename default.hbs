@@ -17,8 +17,13 @@
     {{!-- This tag outputs SEO meta+structured data and other important settings --}}
     {{ghost_head}}
 
+    {{!-- PWA --}}
+    <link rel="manifest" href="/manifest.webmanifest">
+    <meta name="theme-color" content="#313b3f">
+    <link rel="apple-touch-icon" href="/assets/icons/z00md_logo.png">
+
 </head>
-<body class="{{body_class}}">
+<body class="{{body_class}} line-numbers">
 
     <div class="site-wrapper">
         {{!-- Toggle dark theme --}}
@@ -126,6 +131,15 @@
 
     {{!-- Ghost outputs important scripts and data with this tag - it should always be the very last thing before the closing body tag --}}
     {{ghost_foot}}
+
+    {{!-- Service Worker for PWA --}}
+    <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js');
+        });
+    }
+    </script>
 
 </body>
 </html>
