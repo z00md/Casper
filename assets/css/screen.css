@@ -43,7 +43,17 @@ production stylesheet in assets/built/screen.css
     width: 48px;
     cursor: pointer;
 
-    .st2 {
+    .toggle-outer {
+        fill: none;
+        stroke: #fff;
+    }
+
+    .toggle-inner {
+        /* visibility: hidden; */
+        fill: #000;
+    }
+
+    /* .st2 {
         fill: none;
         stroke: #aaa;
         stroke-linecap: round;
@@ -60,7 +70,7 @@ production stylesheet in assets/built/screen.css
 
      .beams {
          visibility: hidden;
-     }
+     } */
 }
 
 .theme-toggle:hover {
@@ -451,7 +461,7 @@ ul.results {
 .site-header-background:not(.responsive-header-img) .site-nav-left-wrapper:after,
 .site-nav-main .site-nav-left-wrapper:after {
     right: 0;
-    background: linear-gradient(to right, color(var(--darkgrey) l(-5%) a(0)) 0%,color(var(--darkgrey) l(-5%)) 100%);
+    /* background: linear-gradient(to right, color(var(--darkgrey) l(-5%) a(0)) 0%,color(var(--darkgrey) l(-5%)) 100%); */
 }
 
 .site-nav-left {

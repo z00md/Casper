@@ -1,21 +1,12 @@
 .dark {
     .theme-toggle {
-        .st2 {
+        .togle-outer {
             fill: none;
-            stroke: #bbb;
-            stroke-linecap: round;
-            stroke-linejoin: round;
-            stroke-miterlimit: 10;
+            stroke: ##fff;
         }
-
-        .st3 {
-            fill: none;
-            stroke: #bbb;
-            stroke-linejoin: round;
-            stroke-miterlimit: 10;
-        }
-
-        .beams {
+    
+        .toggle-inner {
+            fill:#fff;
             visibility: visible;
         }
 
